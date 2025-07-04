@@ -66,7 +66,7 @@ const sampleRestaurants = [
         rating: 4.5,
         deliveryTime: "20-30 min",
         deliveryFee: "$2.99",
-        image: "https://via.placeholder.com/300x150"
+        image: "images/restaurant1.png"
     },
     {
         id: 2,
@@ -75,7 +75,7 @@ const sampleRestaurants = [
         rating: 4.2,
         deliveryTime: "25-35 min",
         deliveryFee: "$1.99",
-        image: "https://via.placeholder.com/300x150"
+        image: "restaurant2.png"
     }
 ];
 
