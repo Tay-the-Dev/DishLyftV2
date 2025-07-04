@@ -8,131 +8,114 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div id="home" class="page-section">
-        <header>
-            <div class="logo-container">
-                <img src="images/dishlyft-logo.png" alt="DishLyft Logo" class="logo">
+    <header>
+        <div class="logo-container">
+            <img src="images/dishlyft-logo.png" alt="DishLyft Logo" class="logo">
+        </div>
+        <div class="nav-container">
+            <button class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="partners.html" class="partner-btn">DishLyft for Restaurant Owners</a></li>
+                    <li class="auth-links">
+                        <a href="login.html" class="login-btn">Login</a>
+                        <a href="signup.html" class="signup-btn">Sign Up</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" placeholder="Search for restaurants or dishes...">
+                <button><i class="fas fa-search"></i></button>
             </div>
-            <div class="nav-container">
-                <button class="hamburger-menu" id="hamburger-menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <a href="/cart" class="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="cart-count"></span>
-                </a>
-                <nav class="mobile-nav" id="mobile-nav">
-                    <ul>
-                        <li><a href="/" data-link>Home</a></li>
-                        <li><a href="/about" data-link>About</a></li>
-                        <li><a href="/orders" data-link>Orders</a></li>
-                        <li><a href="/profile" data-link>Profile</a></li>
-                        <li><a href="/partners" class="partner-btn" data-link>DishLyft for Restaurant Owners</a></li>
-                        <li class="auth-links">
-                            <a href="/login" class="login-btn" data-link>Login</a>
-                            <a href="/signup" class="signup-btn" data-link>Sign Up</a>
-                        </li>
-                    </ul>
-                </nav>
+        </section>
+
+        <section class="featured-restaurants">
+            <h2>Featured Restaurants</h2>
+            <div class="carousel">
+                <div class="restaurant-card">
+                    <img src="images/restaurants/burger-palace.png" alt="Restaurant">
+                    <h3>Burger Palace</h3>
+                    <div class="rating">4.5 ★</div>
+                </div>
+                <div class="restaurant-card">
+                    <img src="images/restaurants/pizza-heaven.png" alt="Restaurant">
+                    <h3>Pizza Heaven</h3>
+                    <div class="rating">4.2 ★</div>
+                </div>
+                <div class="restaurant-card">
+                    <img src="images/restaurants/sushi-world.png" alt="Restaurant">
+                    <h3>Sushi World</h3>
+                    <div class="rating">4.7 ★</div>
+                </div>
             </div>
-        </header>
+        </section>
 
-        <main>
-            <section class="search-section">
-                <div class="search-container">
-                    <input type="text" placeholder="Search for restaurants or dishes...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-            </section>
+        <section class="food-categories">
+            <h2>Categories</h2>
+            <div class="chips-container">
+                <span class="chip active">All</span>
+                <span class="chip">Pizza</span>
+                <span class="chip">Burger</span>
+                <span class="chip">Sushi</span>
+                <span class="chip">Vegan</span>
+                <span class="chip">Chicken</span>
+                <span class="chip">Dessert</span>
+            </div>
+        </section>
 
-            <section class="featured-restaurants">
-                <h2>Featured Restaurants</h2>
-                <div class="carousel">
-                    <div class="restaurant-card" data-link data-href="/restaurant?id=burger-palace">
-                        <img src="images/restaurants/burger-palace.png" alt="Burger Palace">
-                        <h3>Burger Palace</h3>
-                        <div class="rating">4.5 ★</div>
-                    </div>
-                    <div class="restaurant-card" data-link data-href="/restaurant?id=pizza-heaven">
-                        <img src="images/restaurants/pizza-heaven.png" alt="Pizza Heaven">
-                        <h3>Pizza Heaven</h3>
-                        <div class="rating">4.2 ★</div>
-                    </div>
-                    <div class="restaurant-card" data-link data-href="/restaurant?id=sushi-world">
-                        <img src="images/restaurants/sushi-world.png" alt="Sushi World">
-                        <h3>Sushi World</h3>
-                        <div class="rating">4.7 ★</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="food-categories">
-                <h2>Categories</h2>
-                <div class="chips-container">
-                    <span class="chip active">All</span>
-                    <span class="chip">Pizza</span>
-                    <span class="chip">Burger</span>
-                    <span class="chip">Sushi</span>
-                    <span class="chip">Vegan</span>
-                    <span class="chip">Chicken</span>
-                    <span class="chip">Dessert</span>
-                </div>
-            </section>
-
-            <section class="trending-near-you">
-                <h2>Trending Near You</h2>
-                <div class="restaurants-grid">
-                    <div class="restaurant-card" data-link data-href="/restaurant?id=taco-fiesta">
-                        <img src="images/restaurants/taco-fiesta.png" alt="Taco Fiesta">
-                        <div class="restaurant-info">
-                            <h3>Taco Fiesta</h3>
-                            <p>Mexican • $$</p>
-                            <div class="delivery-info">
-                                <span>20-30 min</span>
-                                <span>$2.99 delivery</span>
-                            </div>
-                            <div class="rating">4.3 ★</div>
+        <section class="trending-near-you">
+            <h2>Trending Near You</h2>
+            <div class="restaurants-grid">
+                <div class="restaurant-card" onclick="window.location.href='restaurant.html'">
+                    <img src="images/restaurants/taco-fiesta.png" alt="Restaurant">
+                    <div class="restaurant-info">
+                        <h3>Taco Fiesta</h3>
+                        <p>Mexican • $$</p>
+                        <div class="delivery-info">
+                            <span>20-30 min</span>
+                            <span>$2.99 delivery</span>
                         </div>
-                    </div>
-                    <div class="restaurant-card" data-link data-href="/restaurant?id=noodle-house">
-                        <img src="images/restaurants/noodle-house.png" alt="Noodle House">
-                        <div class="restaurant-info">
-                            <h3>Noodle House</h3>
-                            <p>Asian • $</p>
-                            <div class="delivery-info">
-                                <span>15-25 min</span>
-                                <span>Free delivery</span>
-                            </div>
-                            <div class="rating">4.6 ★</div>
-                        </div>
-                    </div>
-                    <div class="restaurant-card" data-link data-href="/restaurant?id=shake-joint">
-                        <img src="images/restaurants/shake-joint.png" alt="Shake Joint">
-                        <div class="restaurant-info">
-                            <h3>Shake Joint</h3>
-                            <p>Dessert • $$$</p>
-                            <div class="delivery-info">
-                                <span>15-25 min</span>
-                                <span>$1.99 delivery</span>
-                            </div>
-                            <div class="rating">4.8 ★</div>
-                        </div>
+                        <div class="rating">4.3 ★</div>
                     </div>
                 </div>
-            </section>
-        </main>
-    </div>
-
-    <!-- Other page sections (initially hidden) -->
-    <div id="restaurant" class="page-section" style="display:none">
-        <div id="restaurant-content"></div>
-    </div>
-    
-    <div id="cart" class="page-section" style="display:none">
-        <!-- Cart content will be loaded dynamically -->
-    </div>
-    
-    <!-- Other page sections... -->
+                <div class="restaurant-card" onclick="window.location.href='restaurant.html'">
+                    <img src="images/restaurants/noodle-house.png" alt="Restaurant">
+                    <div class="restaurant-info">
+                        <h3>Noodle House</h3>
+                        <p>Asian • $</p>
+                        <div class="delivery-info">
+                            <span>15-25 min</span>
+                            <span>Free delivery</span>
+                        </div>
+                        <div class="rating">4.6 ★</div>
+                    </div>
+                </div>
+                <div class="restaurant-card" onclick="window.location.href='restaurant.html'">
+                    <img src="images/restaurants/shake-joint.png" alt="Restaurant">
+                    <div class="restaurant-info">
+                        <h3>Shake Joint</h3>
+                        <p>Dessert • $$$</p>
+                        <div class="delivery-info">
+                            <span>15-25 min</span>
+                            <span>$1.99 delivery</span>
+                        </div>
+                        <div class="rating">4.8 ★</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -145,6 +128,6 @@
         </div>
     </footer>
 
-    <script type="module" src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
