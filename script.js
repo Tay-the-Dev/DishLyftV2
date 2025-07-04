@@ -1,25 +1,93 @@
 // Mobile Navigation Toggle
-const hamburgerMenu = document.getElementById('hamburger-menu');
-const mobileNav = document.getElementById('mobile-nav');
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const mobileNav = document.getElementById('mobile-nav');
+    
+    if (hamburgerMenu && mobileNav) {
+        hamburgerMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileNav.classList.toggle('active');
+        });
 
-hamburgerMenu.addEventListener('click', () => {
-    mobileNav.classList.toggle('active');
-});
+        // Close when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileNav.contains(e.target) && e.target !== hamburgerMenu) {
+                mobileNav.classList.remove('active');
+            }
+        });
 
-// Close mobile nav when clicking outside
-document.addEventListener('click', (e) => {
-    if (!mobileNav.contains(e.target) && e.target !== hamburgerMenu) {
-        mobileNav.classList.remove('active');
+        // Close when a nav item is clicked
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
     }
+
+    // Initialize cart
+    updateCartCount();
+    if (document.querySelector('.cart-main')) {
+        renderCartItems();
+    }
+
+    // Initialize payment methods
+    if (document.querySelector('.payment-main')) {
+        setupPaymentMethods();
+    }
+
+    // Make all navigation links work
+    setupNavigation();
 });
 
-// Cart functionality
+// Ensure all navigation links work properly
+function setupNavigation() {
+    // Handle internal navigation
+    document.querySelectorAll('a[href^="#"], a[href^="/"], a[href^="."]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href') === '#') {
+                e.preventDefault();
+                return;
+            }
+            
+            // For demo purposes, prevent actual page reloads
+            e.preventDefault();
+            const page = this.getAttribute('href').replace('.html', '').replace('/', '');
+            loadPage(page);
+        });
+    });
+}
+
+// Demo page loading function
+function loadPage(page) {
+    console.log(`Loading ${page} page...`);
+    // In a real app, this would load the actual page
+    // For demo, we'll just show an alert
+    alert(`Navigating to ${page} page (in a real app, this would load properly)`);
+    
+    // Update active state in navigation
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(page)) {
+            link.classList.add('active');
+        }
+    });
+    
+    // Special handling for partners page
+    if (page === 'partners') {
+        document.body.classList.add('partners-page');
+    } else {
+        document.body.classList.remove('partners-page');
+    }
+}
+
+// Cart functionality (same as before, but ensure it works with all pages)
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function updateCartCount() {
     const cartCount = document.getElementById('cart-count');
     if (cartCount) {
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
         cartCount.textContent = totalItems > 0 ? totalItems : '';
     }
 }
