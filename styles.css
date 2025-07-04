@@ -95,7 +95,72 @@ header {
     margin-top: 1rem;
 }
 
-.auth-links {
+/* Ensure all navigation links work */
+.mobile-nav a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.mobile-nav a:hover {
+    background-color: rgba(124, 58, 237, 0.1);
+}
+
+.mobile-nav a.active {
+    color: #7C3AED;
+    font-weight: bold;
+}
+
+/* Partners page specific styles */
+body.partners-page {
+    background-color: #000;
+}
+
+body.partners-page .mobile-nav a.partner-btn {
+    background-color: #EF4444;
+    color: white;
+    border-radius: 8px;
+    margin: 10px;
+    text-align: center;
+}
+
+body.partners-page .mobile-nav a.partner-btn:hover {
+    background-color: #DC2626;
+}
+
+/* Make sure all buttons are clickable */
+button, .btn, a[role="button"] {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Remove any pointer-events:none that might be hiding clicks */
+* {
+    pointer-events: auto !important;
+}
+
+/* Fix for iOS touch issues */
+button, a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+
+/* Ensure all interactive elements are visible */
+button:disabled, .btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Make sure nothing is covering clickable areas */
+header {
+    z-index: 1000;
+}
+
+.mobile-nav {
+    z-index: 999;
+}.auth-links {
     margin-top: 2rem;
     display: flex;
     gap: 1rem;
