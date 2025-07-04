@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DishLyft for Restaurants</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="dishlyft-logo2.png" alt="DishLyft Logo" class="logo">
+        </div>
+        <div class="nav-container">
+            <button class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="partners.html" class="partner-btn">DishLyft for Restaurant Owners</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="partners-main">
+        <div class="partners-hero">
+            <h1>Grow Your Restaurant with DishLyft</h1>
+            <p>Join thousands of restaurants reaching new customers every day</p>
+            <a href="#signup" class="btn-primary">Get Started</a>
+        </div>
+
+        <div class="benefits-section">
+            <h2>Why Partner With Us?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-users"></i>
+                    <h3>More Customers</h3>
+                    <p>Access thousands of hungry customers in your area</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Increased Sales</h3>
+                    <p>Boost your revenue with delivery and takeout orders</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Easy Management</h3>
+                    <p>Simple tools to manage your menu and orders</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="signup-section" id="signup">
+            <h2>Get Started Today</h2>
+            <form class="partner-form">
+                <div class="form-group">
+                    <label for="restaurant-name">Restaurant Name</label>
+                    <input type="text" id="restaurant-name" placeholder="Your Restaurant">
+                </div>
+                <div class="form-group">
+                    <label for="owner-name">Your Name</label>
+                    <input type="text" id="owner-name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="partner-email">Email</label>
+                    <input type="email" id="partner-email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="partner-phone">Phone</label>
+                    <input type="tel" id="partner-phone" placeholder="+254 700 000000">
+                </div>
+                <button type="submit" class="btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 DishLyft. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
