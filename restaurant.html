@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant - DishLyft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/120x40/7C3AED/FFFFFF?text=DishLyft" alt="DishLyft Logo" class="logo">
+        </div>
+        <div class="nav-container">
+            <button class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="cart.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count"></span>
+            </a>
+            <nav class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="partners.html" class="partner-btn">DishLyft for Restaurant Owners</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="restaurant-main">
+        <div class="restaurant-banner">
+            <img src="https://via.placeholder.com/800x300" alt="Restaurant Banner">
+        </div>
+        
+        <div class="restaurant-header">
+            <h1>Burger Palace</h1>
+            <div class="restaurant-meta">
+                <span class="rating">4.5 ★</span>
+                <span class="delivery-fee">$2.99 delivery fee</span>
+                <span class="delivery-time">20-30 min</span>
+            </div>
+            <p class="cuisine-type">American • Burgers • Fast Food</p>
+        </div>
+
+        <div class="menu-section">
+            <h2>Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/100" alt="Cheeseburger">
+                    <div class="item-info">
+                        <h3>Cheeseburger</h3>
+                        <p class="item-description">Classic beef patty with cheese, lettuce, and special sauce</p>
+                        <p class="item-price">$8.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 101, name: 'Cheeseburger', price: 8.99})">+</button>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/100" alt="Bacon Burger">
+                    <div class="item-info">
+                        <h3>Bacon Burger</h3>
+                        <p class="item-description">Juicy beef patty with crispy bacon and cheddar cheese</p>
+                        <p class="item-price">$10.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 102, name: 'Bacon Burger', price: 10.99})">+</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
