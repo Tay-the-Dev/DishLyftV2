@@ -33,14 +33,15 @@
     </header>
 
     <main class="restaurant-main">
+        <!-- Restaurant 1: Burger Palace -->
         <div class="restaurant-banner">
-            <img src="https://via.placeholder.com/800x300" alt="Restaurant Banner">
+            <img src="images/restaurant1.png" alt="Burger Palace Banner">
         </div>
         
         <div class="restaurant-header">
             <h1>Burger Palace</h1>
             <div class="restaurant-meta">
-                <span class="rating">4.5 ★</span>
+                <span class="rating">4.5 ★ (248 reviews)</span>
                 <span class="delivery-fee">$2.99 delivery fee</span>
                 <span class="delivery-time">20-30 min</span>
             </div>
@@ -48,29 +49,400 @@
         </div>
 
         <div class="menu-section">
-            <h2>Menu</h2>
+            <h2>Burgers</h2>
             <div class="menu-items">
                 <div class="menu-item">
-                    <img src="https://via.placeholder.com/100" alt="Cheeseburger">
+                    <img src="images/food/classic-cheeseburger.png" alt="Classic Cheeseburger">
                     <div class="item-info">
-                        <h3>Cheeseburger</h3>
-                        <p class="item-description">Classic beef patty with cheese, lettuce, and special sauce</p>
+                        <h3>Classic Cheeseburger</h3>
+                        <p class="item-description">Beef patty with American cheese, lettuce, tomato, pickles, and special sauce</p>
                         <p class="item-price">$8.99</p>
                     </div>
-                    <button class="add-to-cart" onclick="addToCart({id: 101, name: 'Cheeseburger', price: 8.99})">+</button>
+                    <button class="add-to-cart" onclick="addToCart({id: 101, name: 'Classic Cheeseburger', price: 8.99, restaurant: 'Burger Palace'})">+</button>
                 </div>
                 
                 <div class="menu-item">
-                    <img src="https://via.placeholder.com/100" alt="Bacon Burger">
+                    <img src="images/food/bacon-burger.png" alt="Bacon Burger">
                     <div class="item-info">
-                        <h3>Bacon Burger</h3>
-                        <p class="item-description">Juicy beef patty with crispy bacon and cheddar cheese</p>
-                        <p class="item-price">$10.99</p>
+                        <h3>Bacon King Burger</h3>
+                        <p class="item-description">Two beef patties, smoked bacon, cheddar, crispy onions, and BBQ sauce</p>
+                        <p class="item-price">$12.99</p>
                     </div>
-                    <button class="add-to-cart" onclick="addToCart({id: 102, name: 'Bacon Burger', price: 10.99})">+</button>
+                    <button class="add-to-cart" onclick="addToCart({id: 102, name: 'Bacon King Burger', price: 12.99, restaurant: 'Burger Palace'})">+</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/food/veggie-burger.png" alt="Veggie Burger">
+                    <div class="item-info">
+                        <h3>Mushroom Veggie Burger</h3>
+                        <p class="item-description">Portobello mushroom patty with avocado, sprouts, and garlic aioli</p>
+                        <p class="item-price">$10.49</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 103, name: 'Mushroom Veggie Burger', price: 10.49, restaurant: 'Burger Palace'})">+</button>
+                </div>
+            </div>
+
+            <h2>Sides</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/food/french-fries.png" alt="French Fries">
+                    <div class="item-info">
+                        <h3>Classic Fries</h3>
+                        <p class="item-description">Crispy golden fries with sea salt</p>
+                        <p class="item-price">$3.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 104, name: 'Classic Fries', price: 3.99, restaurant: 'Burger Palace'})">+</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/food/onion-rings.png" alt="Onion Rings">
+                    <div class="item-info">
+                        <h3>Beer Battered Onion Rings</h3>
+                        <p class="item-description">Crispy onion rings with ranch dipping sauce</p>
+                        <p class="item-price">$5.49</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 105, name: 'Onion Rings', price: 5.49, restaurant: 'Burger Palace'})">+</button>
                 </div>
             </div>
         </div>
+
+        <!-- Restaurant 2: Pizza Heaven -->
+        <div class="restaurant-banner">
+            <img src="images/restaurant2.png" alt="Pizza Heaven Banner">
+        </div>
+        
+        <div class="restaurant-header">
+            <h1>Pizza Heaven</h1>
+            <div class="restaurant-meta">
+                <span class="rating">4.7 ★ (312 reviews)</span>
+                <span class="delivery-fee">$1.99 delivery fee</span>
+                <span class="delivery-time">15-25 min</span>
+            </div>
+            <p class="cuisine-type">Italian • Pizza • Family Style</p>
+        </div>
+
+        <div class="menu-section">
+            <h2>Classic Pizzas</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/food/margherita-pizza.png" alt="Margherita Pizza">
+                    <div class="item-info">
+                        <h3>Margherita</h3>
+                        <p class="item-description">Tomato sauce, fresh mozzarella, basil</p>
+                        <p class="item-price">$14.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 201, name: 'Margherita Pizza', price: 14.99, restaurant: 'Pizza Heaven'})">+</button>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="images/food/pepperoni-pizza.png" alt="Pepperoni Pizza">
+                    <div class="item-info">
+                        <h3>Pepperoni Classic</h3>
+                        <p class="item-description">Tomato sauce, mozzarella, spicy pepperoni</p>
+                        <p class="item-price">$16.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 202, name: 'Pepperoni Pizza', price: 16.99, restaurant: 'Pizza Heaven'})">+</button>
+                </div>
+            </div>
+
+            <h2>Specialty Pizzas</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/food/bbq-chicken-pizza.png" alt="BBQ Chicken Pizza">
+                    <div class="item-info">
+                        <h3>BBQ Chicken</h3>
+                        <p class="item-description">BBQ sauce, chicken, red onions, cilantro</p>
+                        <p class="item-price">$18.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 203, name: 'BBQ Chicken Pizza', price: 18.99, restaurant: 'Pizza Heaven'})">+</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/food/vegan-pizza.png" alt="Vegan Pizza">
+                    <div class="item-info">
+                        <h3>Garden Vegan</h3>
+                        <p class="item-description">Vegan cheese, mushrooms, bell peppers, olives</p>
+                        <p class="item-price">$17.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 204, name: 'Garden Vegan Pizza', price: 17.99, restaurant: 'Pizza Heaven'})">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 3: Sushi World -->
+        <div class="restaurant-banner">
+            <img src="images/restaurant5.png" alt="Sushi World Banner">
+        </div>
+        
+        <div class="restaurant-header">
+            <h1>Sushi World</h1>
+            <div class="restaurant-meta">
+                <span class="rating">4.8 ★ (427 reviews)</span>
+                <span class="delivery-fee">$3.99 delivery fee</span>
+                <span class="delivery-time">25-35 min</span>
+            </div>
+            <p class="cuisine-type">Japanese • Sushi • Asian</p>
+        </div>
+
+        <div class="menu-section">
+            <h2>Sushi Rolls</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/food/california-roll.png" alt="California Roll">
+                    <div class="item-info">
+                        <h3>California Roll</h3>
+                        <p class="item-description">Crab, avocado, cucumber</p>
+                        <p class="item-price">$8.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 301, name: 'California Roll', price: 8.99, restaurant: 'Sushi World'})">+</button>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="images/food/spicy-tuna-roll.png" alt="Spicy Tuna Roll">
+                    <div class="item-info">
+                        <h3>Spicy Tuna Roll</h3>
+                        <p class="item-description">Fresh tuna with spicy mayo</p>
+                        <p class="item-price">$10.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 302, name: 'Spicy Tuna Roll', price: 10.99, restaurant: 'Sushi World'})">+</button>
+                </div>
+            </div>
+
+            <h2>Sashimi Platters</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/food/salmon-sashimi.png" alt="Salmon Sashimi">
+                    <div class="item-info">
+                        <h3>Salmon Sashimi (8pc)</h3>
+                        <p class="item-description">Fresh Atlantic salmon</p>
+                        <p class="item-price">$14.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 303, name: 'Salmon Sashimi', price: 14.99, restaurant: 'Sushi World'})">+</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/food/sashimi-combo.png" alt="Sashimi Combo">
+                    <div class="item-info">
+                        <h3>Chef's Sashimi Combo</h3>
+                        <p class="item-description">12 pieces assorted sashimi</p>
+                        <p class="item-price">$24.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({id: 304, name: 'Sashimi Combo', price: 24.99, restaurant: 'Sushi World'})">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 4: Taco Fiesta -->
+<div class="restaurant-banner">
+    <img src="images/restaurant6.png" alt="Taco Fiesta Banner">
+</div>
+
+<div class="restaurant-header">
+    <h1>Taco Fiesta</h1>
+    <div class="restaurant-meta">
+        <span class="rating">4.3 ★ (187 reviews)</span>
+        <span class="delivery-fee">$1.99 delivery fee</span>
+        <span class="delivery-time">15-25 min</span>
+    </div>
+    <p class="cuisine-type">Mexican • Tacos • Street Food</p>
+</div>
+
+<div class="menu-section">
+    <h2>Tacos</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="images/food/carne-asada-taco.png" alt="Carne Asada Taco">
+            <div class="item-info">
+                <h3>Carne Asada Taco</h3>
+                <p class="item-description">Grilled steak, onions, cilantro, lime, salsa verde</p>
+                <p class="item-price">$3.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 401, name: 'Carne Asada Taco', price: 3.99, restaurant: 'Taco Fiesta'})">+</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="images/food/al-pastor-taco.png" alt="Al Pastor Taco">
+            <div class="item-info">
+                <h3>Al Pastor Taco</h3>
+                <p class="item-description">Marinated pork, pineapple, onions, cilantro</p>
+                <p class="item-price">$3.49</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 402, name: 'Al Pastor Taco', price: 3.49, restaurant: 'Taco Fiesta'})">+</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/food/vegan-taco.png" alt="Vegan Taco">
+            <div class="item-info">
+                <h3>Vegan Jackfruit Taco</h3>
+                <p class="item-description">Jackfruit carnitas, avocado crema, pickled onions</p>
+                <p class="item-price">$3.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 403, name: 'Vegan Jackfruit Taco', price: 3.99, restaurant: 'Taco Fiesta'})">+</button>
+        </div>
+    </div>
+
+    <h2>Specialties</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="images/food/quesadilla.png" alt="Quesadilla">
+            <div class="item-info">
+                <h3>Super Quesadilla</h3>
+                <p class="item-description">Grilled flour tortilla with Oaxaca cheese, choice of protein</p>
+                <p class="item-price">$8.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 404, name: 'Super Quesadilla', price: 8.99, restaurant: 'Taco Fiesta'})">+</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/food/elote.png" alt="Mexican Street Corn">
+            <div class="item-info">
+                <h3>Elote (Mexican Street Corn)</h3>
+                <p class="item-description">Grilled corn with crema, cotija cheese, chili powder</p>
+                <p class="item-price">$4.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 405, name: 'Elote', price: 4.99, restaurant: 'Taco Fiesta'})">+</button>
+        </div>
+    </div>
+</div>
+
+        <!-- Restaurant 5: Noodle House -->
+<div class="restaurant-banner">
+    <img src="images/restaurant7.png" alt="Noodle House Banner">
+</div>
+
+<div class="restaurant-header">
+    <h1>Noodle House</h1>
+    <div class="restaurant-meta">
+        <span class="rating">4.6 ★ (276 reviews)</span>
+        <span class="delivery-fee">Free delivery</span>
+        <span class="delivery-time">20-30 min</span>
+    </div>
+    <p class="cuisine-type">Asian • Noodles • Comfort Food</p>
+</div>
+
+<div class="menu-section">
+    <h2>Signature Noodles</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="images/food/ramen.png" alt="Tonkotsu Ramen">
+            <div class="item-info">
+                <h3>Tonkotsu Ramen</h3>
+                <p class="item-description">Pork bone broth, chashu pork, soft egg, bamboo shoots</p>
+                <p class="item-price">$12.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 501, name: 'Tonkotsu Ramen', price: 12.99, restaurant: 'Noodle House'})">+</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="images/food/pho.png" alt="Beef Pho">
+            <div class="item-info">
+                <h3>Beef Pho</h3>
+                <p class="item-description">Vietnamese beef noodle soup with herbs and bean sprouts</p>
+                <p class="item-price">$11.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 502, name: 'Beef Pho', price: 11.99, restaurant: 'Noodle House'})">+</button>
+        </div>
+    </div>
+
+    <h2>Stir-Fried Noodles</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="images/food/pad-thai.png" alt="Pad Thai">
+            <div class="item-info">
+                <h3>Pad Thai</h3>
+                <p class="item-description">Stir-fried rice noodles with egg, tofu, peanuts, and lime</p>
+                <p class="item-price">$10.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 503, name: 'Pad Thai', price: 10.99, restaurant: 'Noodle House'})">+</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/food/chow-mein.png" alt="Chow Mein">
+            <div class="item-info">
+                <h3>Vegetable Chow Mein</h3>
+                <p class="item-description">Stir-fried wheat noodles with mixed vegetables</p>
+                <p class="item-price">$9.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 504, name: 'Vegetable Chow Mein', price: 9.99, restaurant: 'Noodle House'})">+</button>
+        </div>
+    </div>
+</div>
+
+        <!-- Restaurant 6: Shake Joint -->
+<div class="restaurant-banner">
+    <img src="images/restaurant4.png" alt="Shake Joint Banner">
+</div>
+
+<div class="restaurant-header">
+    <h1>Shake Joint</h1>
+    <div class="restaurant-meta">
+        <span class="rating">4.4 ★ (153 reviews)</span>
+        <span class="delivery-fee">$2.49 delivery fee</span>
+        <span class="delivery-time">10-20 min</span>
+    </div>
+    <p class="cuisine-type">Desserts • Milkshakes • Treats</p>
+</div>
+
+<div class="menu-section">
+    <h2>Signature Shakes</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="images/food/chocolate-shake.png" alt="Chocolate Shake">
+            <div class="item-info">
+                <h3>Chocolate Overload</h3>
+                <p class="item-description">Chocolate ice cream, chocolate syrup, whipped cream</p>
+                <p class="item-price">$6.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 601, name: 'Chocolate Overload Shake', price: 6.99, restaurant: 'Shake Joint'})">+</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="images/food/strawberry-shake.png" alt="Strawberry Shake">
+            <div class="item-info">
+                <h3>Strawberry Fields</h3>
+                <p class="item-description">Strawberry ice cream, fresh strawberries, whipped cream</p>
+                <p class="item-price">$6.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 602, name: 'Strawberry Fields Shake', price: 6.99, restaurant: 'Shake Joint'})">+</button>
+        </div>
+    </div>
+
+    <h2>Freakshakes</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="images/food/cookie-shake.png" alt="Cookie Freakshake">
+            <div class="item-info">
+                <h3>Cookie Monster</h3>
+                <p class="item-description">Vanilla shake with cookie dough, whole cookies, and caramel drizzle</p>
+                <p class="item-price">$9.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 603, name: 'Cookie Monster Freakshake', price: 9.99, restaurant: 'Shake Joint'})">+</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/food/brownie-shake.png" alt="Brownie Freakshake">
+            <div class="item-info">
+                <h3>Brownie Blast</h3>
+                <p class="item-description">Chocolate shake with brownie pieces, chocolate sauce, and a whole brownie on top</p>
+                <p class="item-price">$9.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 604, name: 'Brownie Blast Freakshake', price: 9.99, restaurant: 'Shake Joint'})">+</button>
+        </div>
+    </div>
+
+    <h2>Ice Cream Sundaes</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="images/food/sundae.png" alt="Hot Fudge Sundae">
+            <div class="item-info">
+                <h3>Classic Hot Fudge Sundae</h3>
+                <p class="item-description">Vanilla ice cream, hot fudge, whipped cream, nuts, cherry</p>
+                <p class="item-price">$5.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({id: 605, name: 'Hot Fudge Sundae', price: 5.99, restaurant: 'Shake Joint'})">+</button>
+        </div>
+    </div>
+</div>        
     </main>
 
     <script src="script.js"></script>
