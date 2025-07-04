@@ -38,7 +38,7 @@ const restaurants = {
     'pizza-heaven': {
         id: 'pizza-heaven',
         name: "Pizza Heaven",
-        banner: "images/restaurants/pizza-heaven-banner.jpg",
+        banner: "images/restaurants/pizza-heaven.png",
         rating: "4.7 ★ (312 reviews)",
         deliveryFee: "$1.99",
         deliveryTime: "15-25 min",
@@ -67,7 +67,7 @@ const restaurants = {
     'taco-fiesta': {
         id: 'taco-fiesta',
         name: "Taco Fiesta",
-        banner: "images/restaurants/taco-fiesta-banner.jpg",
+        banner: "images/restaurants/taco-fiesta.png",
         rating: "4.3 ★ (187 reviews)",
         deliveryFee: "$1.99",
         deliveryTime: "15-20 min",
