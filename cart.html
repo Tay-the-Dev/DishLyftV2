@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - DishLyft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="dishlyft-logo.png" alt="DishLyft Logo" class="logo">
+        </div>
+        <div class="nav-container">
+            <button class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="cart.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count"></span>
+            </a>
+            <nav class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="partners.html" class="partner-btn">DishLyft for Restaurant Owners</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-main">
+        <h1>Your Cart</h1>
+        
+        <div class="cart-items" id="cart-items">
+            <!-- Dynamically populated by JavaScript -->
+            <div class="empty-cart">
+                <p>Your cart is empty</p>
+                <a href="index.html" class="btn-primary">Browse Restaurants</a>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Delivery Fee</span>
+                <span id="delivery-fee">$2.99</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span>
+                <span id="total">$2.99</span>
+            </div>
+            <a href="payment.html" class="btn-primary checkout-btn">Proceed to Checkout</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
