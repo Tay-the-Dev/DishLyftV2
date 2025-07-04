@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - DishLyft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="dishlyft-logo.png" alt="DishLyft Logo" class="logo">
+        </div>
+        <div class="nav-container">
+            <button class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="partners.html" class="partner-btn">DishLyft for Restaurant Owners</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="payment-main">
+        <h1>Payment Method</h1>
+        
+        <div class="payment-options">
+            <div class="payment-method selected" data-method="credit-card">
+                <i class="fas fa-credit-card"></i>
+                <span>Credit Card</span>
+            </div>
+            <div class="payment-method" data-method="paypal">
+                <i class="fab fa-cc-paypal"></i>
+                <span>PayPal</span>
+            </div>
+            <div class="payment-method" data-method="mpesa">
+                <i class="fas fa-mobile-alt"></i>
+                <span>M-Pesa</span>
+            </div>
+        </div>
+
+        <div class="payment-details" id="credit-card-details">
+            <h2>Card Details</h2>
+            <form>
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Name on Card</label>
+                    <input type="text" id="card-name" placeholder="John Doe">
+                </div>
+            </form>
+        </div>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-item">
+                <span>Items (2)</span>
+                <span>$19.98</span>
+            </div>
+            <div class="summary-item">
+                <span>Delivery Fee</span>
+                <span>$2.99</span>
+            </div>
+            <div class="summary-item total">
+                <span>Total</span>
+                <span>$22.97</span>
+            </div>
+            <button class="btn-primary" onclick="window.location.href='order-confirmation.html'">Confirm Order</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
