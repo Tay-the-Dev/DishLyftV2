@@ -8,62 +8,91 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="images/dishlyft-logo.png" alt="DishLyft Logo" class="logo">
-        </div>
-        <div class="nav-container">
-            <button class="hamburger-menu" id="hamburger-menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="mobile-nav" id="mobile-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="orders.html">Orders</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="partners.html" class="partner-btn">DishLyft for Restaurant Owners</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="about-main">
-        <h1>About DishLyft</h1>
-        
-        <div class="about-content">
-            <p>DishLyft is revolutionizing food delivery by connecting hungry customers with the best local restaurants in your area. Our mission is to make food delivery fast, affordable, and delightful.</p>
-            
-            <h2>Our Story</h2>
-            <p>Founded in 2023, DishLyft began as a small project to help local restaurants reach more customers. Today, we serve thousands of happy customers across the region.</p>
-            
-            <h2>Why Choose Us?</h2>
-            <ul class="benefits-list">
-                <li><i class="fas fa-bolt"></i> Fastest delivery in town</li>
-                <li><i class="fas fa-utensils"></i> Wide variety of cuisines</li>
-                <li><i class="fas fa-percent"></i> Exclusive discounts</li>
-                <li><i class="fas fa-headset"></i> 24/7 customer support</li>
-            </ul>
-        </div>
-
-        <div class="partner-cta">
-            <h2>Are you a restaurant owner?</h2>
-            <p>Join DishLyft and reach thousands of hungry customers!</p>
-            <a href="partners.html" class="btn-primary">Learn More</a>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>© 2023 DishLyft. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+    <div id="about" class="page-section">
+        <header>
+            <div class="logo-container">
+                <img src="images/dishlyft-logo.png" alt="DishLyft Logo" class="logo">
             </div>
-        </div>
-    </footer>
+            <div class="nav-container">
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="/cart" class="cart-icon" data-link aria-label="Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-counter"></span>
+                </a>
+                <nav class="mobile-nav" id="mobile-nav">
+                    <ul>
+                        <li><a href="/" data-link class="nav-link">Home</a></li>
+                        <li><a href="/about" data-link class="nav-link active">About</a></li>
+                        <li><a href="/orders" data-link class="nav-link">Orders</a></li>
+                        <li><a href="/profile" data-link class="nav-link">Profile</a></li>
+                        <li><a href="/partners" class="partner-btn nav-link" data-link>DishLyft for Restaurants</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <script src="script.js"></script>
+        <main class="about-main">
+            <div class="about-container">
+                <h1 class="about-title">About DishLyft</h1>
+                
+                <div class="about-content">
+                    <p class="about-text">DishLyft is revolutionizing food delivery by connecting hungry customers with the best local restaurants in your area. Our mission is to make food delivery fast, affordable, and delightful.</p>
+                    
+                    <section class="about-section">
+                        <h2 class="section-title">Our Story</h2>
+                        <p class="about-text">Founded in 2023, DishLyft began as a small project to help local restaurants reach more customers. Today, we serve thousands of happy customers across the region.</p>
+                    </section>
+                    
+                    <section class="about-section">
+                        <h2 class="section-title">Why Choose Us?</h2>
+                        <ul class="benefits-list">
+                            <li class="benefit-item">
+                                <i class="fas fa-bolt benefit-icon"></i>
+                                <span>Fastest delivery in town</span>
+                            </li>
+                            <li class="benefit-item">
+                                <i class="fas fa-utensils benefit-icon"></i>
+                                <span>Wide variety of cuisines</span>
+                            </li>
+                            <li class="benefit-item">
+                                <i class="fas fa-percent benefit-icon"></i>
+                                <span>Exclusive discounts</span>
+                            </li>
+                            <li class="benefit-item">
+                                <i class="fas fa-headset benefit-icon"></i>
+                                <span>24/7 customer support</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="partner-cta">
+                    <h2 class="cta-title">Are you a restaurant owner?</h2>
+                    <p class="cta-text">Join DishLyft and reach thousands of hungry customers!</p>
+                    <a href="/partners" class="btn-primary cta-button" data-link>Learn More</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="about-footer">
+            <div class="footer-content">
+                <p class="copyright">© 2025 DishLyft. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Other page sections (hidden) -->
+    <div id="home" class="page-section" style="display:none"></div>
+    <div id="restaurant" class="page-section" style="display:none"></div>
+    <div id="cart" class="page-section" style="display:none"></div>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
