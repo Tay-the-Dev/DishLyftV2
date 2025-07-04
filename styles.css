@@ -298,3 +298,422 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* Additional styles for new pages */
+
+/* Cart Page Styles */
+.cart-main {
+    padding: 1rem;
+}
+
+.cart-items {
+    margin-bottom: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.item-info {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.item-name {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.item-price {
+    color: var(--text-secondary);
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    background-color: var(--card-bg);
+    border: none;
+    color: var(--text-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.quantity {
+    margin: 0 0.5rem;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--partner-red);
+    cursor: pointer;
+}
+
+.cart-summary {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.summary-row.total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.empty-cart p {
+    margin-bottom: 1rem;
+}
+
+/* Payment Page Styles */
+.payment-main {
+    padding: 1rem;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.payment-method {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.payment-method.selected {
+    border-color: var(--primary-color);
+}
+
+.payment-method i {
+    font-size: 1.5rem;
+}
+
+.payment-details {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 8px;
+    color: var(--text-color);
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.order-summary {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+/* Confirmation Page Styles */
+.confirmation-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 1rem;
+}
+
+.confirmation-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.confirmation-icon {
+    color: var(--success-green);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.order-number {
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
+}
+
+.delivery-time {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.thank-you {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* Auth Pages Styles */
+.auth-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 1rem;
+}
+
+.auth-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-card h1 {
+    margin-bottom: 0.5rem;
+}
+
+.auth-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.social-login {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.social-login p {
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 30%;
+    background-color: #333;
+    top: 50%;
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.social-btn {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.social-btn.google {
+    background-color: #4285F4;
+    color: white;
+}
+
+.social-btn.apple {
+    background-color: #000;
+    color: white;
+}
+
+.auth-footer {
+    text-align: center;
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* About Page Styles */
+.about-main {
+    padding: 1rem;
+}
+
+.about-content {
+    margin-bottom: 2rem;
+}
+
+.about-content h2 {
+    margin: 1.5rem 0 1rem;
+}
+
+.benefits-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.benefits-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.benefits-list i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.partner-cta {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.partner-cta h2 {
+    margin-bottom: 0.5rem;
+}
+
+.partner-cta p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+/* Partners Page Styles */
+.partners-main {
+    padding: 1rem;
+}
+
+.partners-hero {
+    background-color: var(--card-bg);
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.partners-hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+.partners-hero p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.benefits-section {
+    margin-bottom: 2rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.benefit-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.benefit-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+    color: var(--text-secondary);
+}
+
+.partner-form {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
