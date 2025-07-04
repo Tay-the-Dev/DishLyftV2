@@ -13,7 +13,6 @@ Welcome to **DishLyft**, a modern, mobile-first food delivery web app prototype,
 - 💳 Checkout page with simulated payment methods:
   - Credit Card
   - PayPal
-  - M-Pesa (Kenya-specific)
 - ✅ Order confirmation flow with fake order ID
 - 🔐 Login/signup with Apple & Google UI buttons (non-functional)
 - 🍴 “DishLyft for Restaurant Owners” call-to-action buttons
