@@ -95,3 +95,117 @@ const sampleMenuItems = [
         image: "https://via.placeholder.com/100"
     }
 ];
+
+// Cart functionality
+function renderCartItems() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const subtotalElement = document.getElementById('subtotal');
+    const totalElement = document.getElementById('total');
+    
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+            <div class="empty-cart">
+                <p>Your cart is empty</p>
+                <a href="index.html" class="btn-primary">Browse Restaurants</a>
+            </div>
+        `;
+        subtotalElement.textContent = '$0.00';
+        totalElement.textContent = '$2.99'; // Just delivery fee
+        return;
+    }
+
+    let cartHTML = '';
+    let subtotal = 0;
+
+    cart.forEach(item => {
+        subtotal += item.price * item.quantity;
+        cartHTML += `
+            <div class="cart-item">
+                <div class="item-info">
+                    <div class="item-name">${item.name}</div>
+                    <div class="item-price">$${item.price.toFixed(2)}</div>
+                </div>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                    <span class="quantity">${item.quantity}</span>
+                    <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                </div>
+                <button class="remove-btn" onclick="removeFromCart(${item.id})">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        `;
+    });
+
+    cartItemsContainer.innerHTML = cartHTML;
+    subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+    totalElement.textContent = `$${(subtotal + 2.99).toFixed(2)}`; // Adding delivery fee
+}
+
+function updateQuantity(itemId, change) {
+    const itemIndex = cart.findIndex(item => item.id === itemId);
+    if (itemIndex !== -1) {
+        cart[itemIndex].quantity += change;
+        
+        if (cart[itemIndex].quantity <= 0) {
+            cart.splice(itemIndex, 1);
+        }
+        
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCartItems();
+        updateCartCount();
+    }
+}
+
+function removeFromCart(itemId) {
+    cart = cart.filter(item => item.id !== itemId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCartItems();
+    updateCartCount();
+}
+
+// Initialize cart on cart page
+if (document.querySelector('.cart-main')) {
+    renderCartItems();
+}
+
+// Payment method selection
+function setupPaymentMethods() {
+    const paymentMethods = document.querySelectorAll('.payment-method');
+    const paymentDetails = document.querySelectorAll('[id$="-details"]');
+    
+    paymentMethods.forEach(method => {
+        method.addEventListener('click', () => {
+            // Remove selected class from all methods
+            paymentMethods.forEach(m => m.classList.remove('selected'));
+            
+            // Add selected class to clicked method
+            method.classList.add('selected');
+            
+            // Hide all payment details
+            paymentDetails.forEach(detail => detail.style.display = 'none');
+            
+            // Show corresponding payment details
+            const methodType = method.dataset.method;
+            const detailsElement = document.getElementById(`${methodType}-details`);
+            if (detailsElement) {
+                detailsElement.style.display = 'block';
+            }
+        });
+    });
+}
+
+// Initialize payment methods on payment page
+if (document.querySelector('.payment-main')) {
+    setupPaymentMethods();
+}
+
+// Form validation for partner signup
+if (document.querySelector('.partner-form')) {
+    document.querySelector('.partner-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Here you would typically send the data to your server
+        alert('Application submitted successfully! We will contact you soon.');
+        this.reset();
+    });
+}
